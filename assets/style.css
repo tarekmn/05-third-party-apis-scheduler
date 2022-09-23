@@ -26,9 +26,10 @@ textarea {
 }
 
 .time-block {
-  text-align: center;
+  text-align: left;
   border-radius: 15px;
 }
+
 
 .row {
   white-space: pre-wrap;
