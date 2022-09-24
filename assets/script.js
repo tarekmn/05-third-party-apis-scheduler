@@ -41,18 +41,39 @@ var containerArray = [
 containerArray[0].button.on("click", function(event){
   event.preventDefault();
   console.log(event.target)
-  console.log(containerArray[0].target.val())}
-  
-  
+  console.log(containerArray[0].target.val())
+  localStorage.setItem("saves0", containerArray[0].target.val())
+}
   )
 
 containerArray[1].button.on("click", function(event){
   console.log(event.target)
-  console.log(containerArray[1].target.val())})
+  console.log(containerArray[1].target.val())
+  localStorage.setItem("saves1",containerArray[1].target.val() )}
+  )
 
   containerArray[2].button.on("click", function(event){
     console.log(event.target)
-    console.log(containerArray[2].target.val())})
+    console.log(containerArray[2].target.val())
+    localStorage.setItem("saves2",containerArray[1].target.val() )
+  })
+
+    
+    //get item section
+var saves0 = localStorage.getItem("saves0");
+console.log(saves0);
+$('#9am').text(saves0);    
+
+var saves1 = localStorage.getItem("saves1");
+console.log(saves1);
+$('#10am').text(saves1);
+
+var saves2 = localStorage.getItem("saves2");
+console.log(saves2);
+$('#11am').text(saves2);
+    //update each text textarea with given save
+
+
 
 
 //Adding past, present, future class functions
