@@ -1,9 +1,7 @@
 # 05 Third-Party APIs: Work Day Scheduler
 						
 ## Description
-A social media company has reached out looking for help in creating a web developer quiz for their potential new hires. Their request was for the app to run in the browser and will feature dynamically updated HTML and CSS powered by JavaScript code. When the user clicks the start button, a time starts and presents a question. If they select the incorrect answer, then time is subtracted from the clock. When all the questions are answered or the timer reaches 0, then the quiz is over.
-
-I accomplished this request by using DOM HTML, CSS for the interface and JavaScript for the logic.
+My co-worker and I were talking about how busy we've been lately. We thought it would be a great idea to build out a daily planner. This planner would be color quoted for past hours (gray), present hours(red) and future hours(green). We wanted the planner to save text regardless of refreshing the page. I accomplished this by using HTML, CSS for the interface and JavaScript with JQuery DOM manipulation for the logic.
 
 
  
@@ -25,7 +23,9 @@ X
 In addition, I included screenshot below: 
 
 
-![screenshot #1](X)
+![screenshot #1](./assets/screenshot1.png)
+![screenshot #1](./assets/screenshot2.png)
+
 
 
 

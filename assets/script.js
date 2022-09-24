@@ -3,8 +3,9 @@ var timeArea = $(".hour");
 var timeBlocks = $(".time-block");
 var saveButton = $(".saveBtn");
 var currentHour = moment().format('H');
+console.log(currentHour)
 var fakeHour = 10;
-console.log(currentHour);
+
 
 
 var containerArray = [
@@ -23,46 +24,58 @@ var containerArray = [
     target: $('#11am'),
     button: $('#saveBtn3')
   },
+  {
+    time: 12,
+    target: $('#12pm'),
+    button: $('#saveBtn4')
+  },
+  {
+    time: 13,
+    target: $('#1pm'),
+    button: $('#saveBtn5')
+  },
+  {
+    time: 14,
+    target: $('#2pm'),
+    button: $('#saveBtn6')
+  },
+  {
+    time: 15,
+    target: $('#3pm'),
+    button: $('#saveBtn7')
+  },
+  {
+    time: 16,
+    target: $('#4pm'),
+    button: $('#saveBtn8')
+  },
+  {
+    time: 17,
+    target: $('#5pm'),
+    button: $('#saveBtn9')
+  },
 
 ]
 
-// function retrievingTextValues() {
 
-//   for (var x = 0; x < containerArray.length; x++) {
 
-//     containerArray[x].button.on("click", function (event) {
-//       event.preventDefault();
-//   console.log(event.target)
-//   console.log(containerArray[x].target.val())})
-//   }
-// };
-
-//THIS WORKS INDIVIDUALLY 
-containerArray[0].button.on("click", function(event){
-  event.preventDefault();
-  console.log(event.target)
-  console.log(containerArray[0].target.val())
-  localStorage.setItem("saves0", containerArray[0].target.val())
-}
-  )
-
-containerArray[1].button.on("click", function(event){
-  console.log(event.target)
-  console.log(containerArray[1].target.val())
-  localStorage.setItem("saves1",containerArray[1].target.val() )}
-  )
-
-  containerArray[2].button.on("click", function(event){
+// Retrieving Text values 
+for (let i = 0; i < containerArray.length; i++) {
+  containerArray[i].button.on("click", function (event) {
+    event.preventDefault();
     console.log(event.target)
-    console.log(containerArray[2].target.val())
-    localStorage.setItem("saves2",containerArray[1].target.val() )
+    console.log(containerArray[i].target.val())
+    localStorage.setItem("saves" + i, containerArray[i].target.val())
   })
+}
 
-    
-    //get item section
+
+//get item section
+
+
 var saves0 = localStorage.getItem("saves0");
 console.log(saves0);
-$('#9am').text(saves0);    
+$('#9am').text(saves0);
 
 var saves1 = localStorage.getItem("saves1");
 console.log(saves1);
@@ -71,7 +84,31 @@ $('#10am').text(saves1);
 var saves2 = localStorage.getItem("saves2");
 console.log(saves2);
 $('#11am').text(saves2);
-    //update each text textarea with given save
+
+var saves3 = localStorage.getItem("saves3");
+console.log(saves3);
+$('#12pm').text(saves3);
+
+var saves4 = localStorage.getItem("saves4");
+console.log(saves4);
+$('#1pm').text(saves4);
+
+var saves5 = localStorage.getItem("saves5");
+console.log(saves5);
+$('#2pm').text(saves5);
+
+var saves6 = localStorage.getItem("saves6");
+console.log(saves6);
+$('#3pm').text(saves6);
+
+var saves7 = localStorage.getItem("saves7");
+console.log(saves7);
+$('#4pm').text(saves7);
+
+var saves8 = localStorage.getItem("saves8");
+console.log(saves8);
+$('#5pm').text(saves8);
+
 
 
 
@@ -89,35 +126,22 @@ function future(x) {
   x.addClass('future');
 }
 
-//future(timeBlocks0);  //tester on timeBlocks0
-//present(timeBlocks1); //tester on timeBlocks1
 
+// //Time checker function
 function checkTimeBlock() {
   for (var i = 0; i < containerArray.length; i++) {
-    if (containerArray[i].time < fakeHour) {
+    if (containerArray[i].time < currentHour) {
       past(containerArray[i].target)
-    } else if (containerArray[i].time === fakeHour) {
+    } else if (containerArray[i].time == currentHour) {
       present(containerArray[i].target)
     }
-    else if (containerArray[i].time > fakeHour) {
+    else if (containerArray[i].time > currentHour) {
       future(containerArray[i].target)
     }
   }
 };
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+//Initial function for timer
 function init() {
   setInterval(function () {
     $('#currentDay').text(moment().format('MMMM Do YYYY, h:mm:ss a'))
@@ -130,7 +154,20 @@ function init() {
 
 init();
 checkTimeBlock();
-// retrievingTextValues();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
