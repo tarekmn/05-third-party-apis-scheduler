@@ -7,7 +7,7 @@ console.log(currentHour)
 var fakeHour = 10;
 
 
-
+//Primary container
 var containerArray = [
   {
     time: 9,
@@ -71,42 +71,31 @@ for (let i = 0; i < containerArray.length; i++) {
 
 
 //get item section
-
-
 var saves0 = localStorage.getItem("saves0");
-console.log(saves0);
 $('#9am').text(saves0);
 
 var saves1 = localStorage.getItem("saves1");
-console.log(saves1);
 $('#10am').text(saves1);
 
 var saves2 = localStorage.getItem("saves2");
-console.log(saves2);
 $('#11am').text(saves2);
 
 var saves3 = localStorage.getItem("saves3");
-console.log(saves3);
 $('#12pm').text(saves3);
 
 var saves4 = localStorage.getItem("saves4");
-console.log(saves4);
 $('#1pm').text(saves4);
 
 var saves5 = localStorage.getItem("saves5");
-console.log(saves5);
 $('#2pm').text(saves5);
 
 var saves6 = localStorage.getItem("saves6");
-console.log(saves6);
 $('#3pm').text(saves6);
 
 var saves7 = localStorage.getItem("saves7");
-console.log(saves7);
 $('#4pm').text(saves7);
 
 var saves8 = localStorage.getItem("saves8");
-console.log(saves8);
 $('#5pm').text(saves8);
 
 

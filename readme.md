@@ -17,7 +17,7 @@ This code does not require any installation. The HTML and Assets folders are pro
 ## Usage
 The following code base was uploaded to a URL using GitHub for your convivence. The following URL is:
 
-X
+https://tarekmn.github.io/05-third-party-apis-scheduler/
 
 
 In addition, I included screenshot below: 
