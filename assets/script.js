@@ -3,8 +3,7 @@ var timeArea = $(".hour");
 var timeBlocks = $(".time-block");
 var saveButton = $(".saveBtn");
 var currentHour = moment().format('H');
-console.log(currentHour)
-var fakeHour = 10;
+var clearButton = $("#clearButton");
 
 
 //Primary container
@@ -129,6 +128,12 @@ function checkTimeBlock() {
     }
   }
 };
+
+clearButton.on("click", function (event) {
+  event.preventDefault();
+  localStorage.clear();
+  location.reload();
+});
 
 //Initial function for timer
 function init() {

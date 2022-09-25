@@ -29,8 +29,14 @@ textarea {
 .time-block {
   text-align: left;
   border-radius: 15px;
+  border-top-right-radius: 0px;
+  border-bottom-right-radius: 0px;
 }
 
+#clearButton {
+  border-radius: 15px;
+  height: 50px;
+}
 
 .row {
   white-space: pre-wrap;
@@ -61,14 +67,16 @@ textarea {
 }
 
 .saveBtn {
-  border-left: 1px solid black;
+  border-left: 2px solid black;
   border-top-right-radius: 15px;
   border-bottom-right-radius: 15px;
   background-color: #06aed5;
   color: white;
 }
 
-.saveBtn i:hover {
+.saveBtn:active,
+#clearButton:active {
   font-size: 20px;
   transition: all 0.3s ease-in-out;
+  background-color: purple;
 }
